@@ -1,0 +1,115 @@
+<!-- templates/home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+<section class="contact_us">
+    <div class="container-lg">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-8 col-12">
+                <div class="contact_text">
+                    <h5>Contact</h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+            </div>
+        </div>
+        <form method="post" action="">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <div class="input_field">
+                        <label for="id_first_name">First Name</label>
+                        {{ form.first_name }}
+                        {% if form.first_name.errors %}
+                            <div class="error">{{ form.first_name.errors }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <div class="input_field">
+                        <label for="id_last_name">Last Name</label>
+                        {{ form.last_name }}
+                        {% if form.last_name.errors %}
+                            <div class="error">{{ form.last_name.errors }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <div class="input_field">
+                        <label for="id_company">Company</label>
+                        {{ form.company }}
+                        {% if form.company.errors %}
+                            <div class="error">{{ form.company.errors }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <div class="input_field">
+                        <label for="id_phone_number">Phone Number</label>
+                        {{ form.phone_number }}
+                        {% if form.phone_number.errors %}
+                            <div class="error">{{ form.phone_number.errors }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <div class="input_field">
+                        <label for="id_email">Your Email</label>
+                        {{ form.email }}
+                        {% if form.email.errors %}
+                            <div class="error">{{ form.email.errors }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <div class="input_field">
+                        <label for="id_website">Your Website</label>
+                        {{ form.website }}
+                        {% if form.website.errors %}
+                            <div class="error">{{ form.website.errors }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="bg">
+                        <p>Which Product/Service Are You Interested In*</p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="radio_bg">
+                        {% for choice in form.product_interest.field.choices %}
+                            <div class="radio_group">
+                                <input type="radio" name="product_interest" id="product_interest_{{ forloop.counter }}" value="{{ choice.0 }}" class="large_radio" {% if form.product_interest.value == choice.0 %}checked{% endif %}>
+                                <label for="product_interest_{{ forloop.counter }}">{{ choice.1 }}</label>
+                            </div>
+                        {% endfor %}
+                        {% if form.product_interest.errors %}
+                            <div class="error">{{ form.product_interest.errors }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-12 mt-3">
+                    <div class="text_write">
+                        <label for="id_enquiry">Enquiry<span>*</span></label>
+                        {{ form.enquiry }}
+                        {% if form.enquiry.errors %}
+                            <div class="error">{{ form.enquiry.errors }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="smt_btn mt-4">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>

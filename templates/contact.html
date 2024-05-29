@@ -1,0 +1,287 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <!-- Main Top navbar End -->
+
+    <!-- Banner-Section-Start -->
+    <section class="main_banner">
+        <div class="banner_body">
+            <div class="container-lg">
+                <div class="row justify-content-between align-items-center pb-lg-5 pb-4">
+                    <div class="col-lg-6">
+                        <div class="banner_text">
+                            {% for item in banners %}
+                                <h5>{{ item.title }}</h5>
+                                <p>{{ item.description }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="clients_details float-lg-end">
+                            <div class="text_bg">
+                                <p>Our Clients</p>
+                                {% for client in clients %}
+                                <div class="clients_link d-flex align-items-center gap-2 pb-3">
+                                    <div class="d-flex clinets_box">
+                                        <div class="clients_image">
+                                            <a href="{{ client.link }}"><img src="{{ client.image.url }}" alt="{{ client.name }}"></a>
+                                        </div>                                              
+                                    </div>
+
+                                    <div class="clients_meet">
+                                        <a href="{{ client.link }}">See more+</a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div class="clients_link d-flex align-items-center gap-2 mt-2">
+                                <div class="clients_image">
+                                    <a href=""><img src="{% static 'assets/Image/clients2.png' %}" alt=""></a>
+                                </div>
+                                <div class="clients_meet">
+                                    <p class="mb-0">Contect</p>
+                                    <a href="">(+91) 7309902183</a>
+                                </div>
+                            </div>
+                            <div class="decover_btn mt-4">
+                                <a href="">Discover more</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="about_image">
+                {% for item in banners %}
+                <img src="{{ item.image.url }}" alt="{{ item.title }}" class="w-100">
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- Banner-Section-End -->
+
+    <!-- Sending Massage Section Start -->
+    <section class="send_massage">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-lg-8">
+                    <form action="" method="post" class="form_box" id="contact-form" novalidate>
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 mb-3">
+                                <div class="input_field">
+                                    {{ form.full_name.label_tag }}
+                                    {{ form.full_name }}
+                                    <small class="text-danger">{{ form.full_name.errors }}</small>
+                                </div>
+                            </div>
+        
+                            <div class="col-lg-4 col-md-6 mb-3">
+                                <div class="input_field">
+                                    {{ form.company.label_tag }}
+                                    {{ form.company }}
+                                    <small class="text-danger">{{ form.company.errors }}</small>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-3">
+                                <div class="input_field">
+                                    {{ form.phone_number.label_tag }}
+                                    {{ form.phone_number }}
+                                    <small class="text-danger">{{ form.phone_number.errors }}</small>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-3">
+                                <div class="input_field">
+                                    {{ form.email.label_tag }}
+                                    {{ form.email }}
+                                    <small class="text-danger">{{ form.email.errors }}</small>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-3">
+                                <div class="input_field">
+                                    {{ form.website.label_tag }}
+                                    {{ form.website }}
+                                    <small class="text-danger">{{ form.website.errors }}</small>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="bg">
+                                    <p>{{ form.product_interest.label_tag }}</p>
+                                </div>
+                            </div>
+                        <div class="col-12">
+                            <div class="radio_bg">
+                                {% for radio in form.product_interest %}
+                                    <div class="radio_group">
+                                        {{ radio.tag }}
+                                        {{ radio.choice_label }}
+                                    </div>
+                                {% endfor %}
+                                <small class="text-danger">{{ form.product_interest.errors }}</small>
+                            </div>
+                        </div>
+                            <div class="col-12 mt-3">
+                                <div class="text_write">
+                                    {{ form.enquiry.label_tag }}<span>*</span>
+                                    {{ form.enquiry }}
+                                    <small class="text-danger">{{ form.enquiry.errors }}</small>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="smt_btn mt-4">
+                                   
+                                    <button type="submit" class="btn btn-primary" onclick="submitForm()">Submit</button>
+                                    {% comment %} <button type="submit" class="btn btn-primary">Submit</button> {% endcomment %}
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4">
+                    <div class="massage_body mb-3">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="content_fl">
+                                    <div class="cyrcle_area">
+                                        <a href=""><i class="fa-solid fa-phone-volume"></i></a>
+                                    </div>
+                                    <div class="num_contect">
+                                        <p><a href="">Phone Number</a></p>
+                                        <h5><a href="">+91 8303992628</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="massage_body mb-3">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="content_fl">
+                                    <div class="cyrcle_area">
+                                        <a href=""><i class="fa-solid fa-envelope"></i></a>
+                                    </div>
+                                    <div class="num_contect">
+                                        <p><a href="">Email</a></p>
+                                        <h5><a href="">Madmenwork@gmail.com</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="massage_body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="content_fl">
+                                    <div class="cyrcle_area">
+                                        <a href=""><i class="fa-solid fa-location-dot"></i></a>
+                                    </div>
+                                    <div class="num_contect">
+                                        <p><a href="">Location</a></p>
+                                        <h5><a href="">Suite 972 Hyon Club, WV 62449</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <!-- Sending Massage Section End -->
+
+    <!-- Find Map's Section Start -->
+    <section class="map_area">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-12">
+                    <div class="map_text">
+                        <h5><label for="" class="color_text">Follow Us</label> On Map</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Find Map's Section End -->
+
+
+     
+
+    <!-- Compliance Section Start -->
+    <section class="compliance_main">
+        <div class="container-lg">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-8 col-12">
+                    <div class="story_contant">
+                        <h5><label for="" class="color_text">Compliance</label></h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-2 col-6">
+                    <div class="compliace_image">
+                        <img src="{% static 'assets/Image/complinces1.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <div class="compliace_image">
+                        <img src="{% static 'assets/Image/complinces2.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <div class="compliace_image">
+                        <img src="{% static 'assets/Image/complinces1.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <div class="compliace_image">
+                        <img src="{% static 'assets/Image/complinces3.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <!-- Compliance Section End -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+    
+        // Function to show SweetAlert on form submission success or failure
+        function showAlert(message, alertType) {
+            swal({
+            title: message,
+            icon: alertType,
+            button: "OK",
+            });
+        }
+        </script>
+    
+    
+    
+        <script>
+            // Function to handle form submission
+            function submitForm() {
+            document.getElementById('contactForm').submit();
+            }
+        
+            // Django form submission success or failure handling
+            {% if messages %}
+            {% for message in messages %}
+                showAlert("{{ message }}", "{{ message.tags }}");
+            {% endfor %}
+            {% endif %}
+        </script>
+
+{% endblock content %} 

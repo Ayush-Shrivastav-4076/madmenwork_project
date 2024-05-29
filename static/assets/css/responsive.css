@@ -1,0 +1,504 @@
+@media screen and (max-width: 991px) {
+
+
+  /* Banner-Section-Start */
+
+  .banner_text h5 {
+
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 45px;
+    text-align: center;
+  }
+
+  .banner_text p {
+
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .text_bg p {
+
+    text-align: center;
+    color: var(--bs-gray);
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .clients_details {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .decover_btn {
+
+    text-align: center;
+  }
+
+  .decover_btn a {
+
+    padding: 9px 25px;
+    font-size: 14px;
+    font-weight: 300;
+
+  }
+.input_field{
+
+  padding: 0;
+}
+.about_image img{
+
+  height: auto;
+}
+  /* Banner-Section-End */
+
+  /* you’ve come to the right place-Section-Start */
+  .Right_place {
+
+    padding: 50px 0px;
+  }
+
+  .right_place_text {
+
+    text-align: center;
+  }
+
+  .right_place_text h5 {
+
+    font-size: 43px;
+  }
+
+  .right_place_text p {
+
+    font-size: 16px;
+  }
+
+  /* you’ve come to the right place-Section-End */
+
+  /* design_containt Start */
+  .design_containt p {
+
+    font-size: 16px;
+  }
+
+  /* design_containt End */
+
+
+  /* What We Do Start */
+  .bags_text h5 {
+
+    font-size: 38px;
+  }
+
+  .bags_text p {
+
+    font-size: 16px;
+  }
+
+  /* What We Do End */
+
+  /* sourcing_content start */
+  .sourcing_content p {
+
+    font-size: 16px;
+  }
+
+  .sourcing_link {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* sourcing_content End */
+  .firm_content h5 {
+
+    font-size: 35px;
+  }
+
+  .contect_us {
+
+    padding: 20px 0px;
+  }
+
+  .the_best {
+
+    padding: 15px 0px;
+  }
+
+  .the_best_text h5 {
+
+    text-align: center;
+    margin: 0;
+  }
+
+  .the_best_text p {
+
+    /* font-size: 12px; */
+    text-align: center;
+    margin: 0;
+  }
+
+  .dummy_text_box {
+
+    margin: 55px 0px;
+  }
+
+  .story_contant h5 {
+
+    padding: 0;
+  }
+
+  .compliance_main {
+
+    padding: 40px 0px;
+  }
+
+  .footer_text p {
+
+    font-size: 15px;
+    line-height: 28.8px;
+    padding-top: 12px;
+
+  }
+
+  .main_footer {
+
+    padding: 30px 0px;
+  }
+
+  .full_ser_text p {
+
+    text-align: center;
+  }
+
+  .trust_text h5 {
+
+    text-align: center;
+  }
+
+  .trust_text p {
+
+    text-align: center;
+  }
+
+  .the_image img {
+
+    height: auto;
+  }
+
+  .full_ser_image img {
+
+    height: auto;
+  }
+
+  .story_image img {
+
+    height: auto;
+  }
+
+  .manufacturer_image_bg img {
+
+    height: auto;
+  }
+  .trust_image{
+
+    margin-top: 40px;
+  }
+  .trust_image img{
+
+    height: auto;
+    object-fit: cover;
+  }
+  .text_manufacturer_bg h5{
+
+    padding: 0px 0px 10px 0px;
+  }
+  .manufacturer_sec{
+
+    padding: 20px 0px;
+  }
+  .madmen_main{
+
+    padding: 50px 0px;
+  }
+  .the_image{
+
+    padding: 30px 0px;
+  }
+  .product_text h5{
+
+    font-size: 46px;
+  }
+  .leather_product{
+
+    padding: 30px 0px;
+  }
+}
+
+@media(max-width:768px) {
+  .main_banner{
+
+    padding: 20px 0px;
+  }
+  .slider_box.owl-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    bottom: -16%!important;
+    left: 35% !important;
+    top: auto;
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF1A !important;
+    border-radius: 50%;
+    color: #fff;
+}
+.slider_box.owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  bottom: -22%!important;
+  right: 31% !important;
+  top: auto;
+  width: 40px;
+  height: 40px;
+  background: #FFC148 !important;
+  border-radius: 50%;
+  color: #fff;
+}
+
+
+  .clients_details {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .slider_image_body img {
+
+    height: 170px;
+  }
+
+  .radio_bg {
+
+    gap: 10px
+  }
+
+  .radio_bg label {
+
+    font-size: 16px;
+  }
+
+  .link_btn {
+
+    padding: 12px 10px;
+  }
+
+  .list_bg .leather {
+    padding: 5px 20px;
+    font-size: 14px;
+  }
+
+  .banner_text h5 {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+
+  .banner_text p {
+
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .the_best_text h5 {
+
+    font-size: 25px;
+    line-height: 33.5px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+
+  }
+
+  .the_best_text p {
+
+    font-size: 13px;
+    line-height: 24.8px;
+    margin: 0;
+  }
+
+  .checking_text {
+
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .sign_text p {
+
+    font-size: 15px;
+  }
+
+  .decover_btn a {
+    padding: 10px 39px;
+    font-size: 12px;
+  }
+
+  .story_contant h5 {
+    font-size: 26px;
+    line-height: 25.5px;
+
+  }
+
+  .story_contant p {
+    font-size: 13px;
+    line-height: 24.8px;
+  }
+
+  .dummy_text_box {
+    margin: 20px 0px
+  }
+
+  .heading h5 {
+
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .heading p {
+
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .know_pepole {
+
+    text-align: center;
+  }
+
+  .know_pepole h5 {
+
+    margin-bottom: 0;
+  }
+
+  .activity {
+    padding: 20px 0px;
+    margin: 0;
+  }
+
+  .slide_image .slide_date h5 {
+
+    font-size: 17px;
+  }
+
+  .sourcing_content .enquiry_btn a {
+
+    font-size: 12px;
+  }
+
+  .sourcing_content .request_btn a {
+
+    font-size: 12px;
+  }
+
+  .the_image img {
+
+    height: auto;
+  }
+
+  .story_image img {
+
+    height: auto;
+  }
+
+  .heading h5 {
+
+    padding-bottom: 0;
+    font-size: 25px;
+  }
+
+  .slide_image img {
+
+    height: 250px;
+  }
+
+  .compliace_image img {
+
+    height: 100px;
+  }
+
+  .radio_bg label {
+
+    font-size: 12px;
+  }
+
+  .full_ser_text p {
+
+    font-size: 13px;
+  }
+
+  .features_text h5 {
+
+    font-size: 18px;
+  }
+
+  .features_text p {
+
+    font-size: 13px;
+    padding-top: 0;
+  }
+  .input_field{
+
+    padding: 0;
+  }
+  .features_link {
+    width: 49px;
+    height: 49px;
+  }
+
+  .trust_text h5 {
+
+    font-size: 26px;
+    line-height: 16.5px;
+   
+
+  }
+
+  .manufacturer_text h5 {
+    font-size: 22px;
+    line-height: 30.5px;
+  }
+
+  .manufacturer_text p {
+
+    font-size: 13px;
+  }
+
+  .manufacturer_sec {
+    padding: 30px 0px;
+  }
+
+  .trusted_main {
+    background-color: var(--bs-black);
+    margin-bottom: 0;
+    padding: 30px 0px;
+  }
+  .medman_text h5 {
+    font-size: 20px;
+    line-height: 28.5px;
+}
+.text_write textarea{
+
+  height: 130px;
+}
+.text_manufacturer_bg h5{
+
+  font-size: 19px;
+}
+}

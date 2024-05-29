@@ -1,0 +1,564 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+
+    <!-- Banner-Section-Start -->
+    <section class="main_banner py-lg-5 py-2">
+        <div class="banner_body">
+            <div class="container-lg">
+                <div class="row justify-content-between align-items-center pb-5">
+                    <div class="col-lg-6">
+                        <div class="banner_text">
+                            
+                            {% for item in banners %}
+                                <h5>{{ item.title }}</h5>
+                                <p>{{ item.description }}</p>
+                            {% endfor %}
+                        
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="clients_details float-lg-end">
+                            <div class="text_bg">
+                                <p>Our Clients</p>
+                                {% for client in clients %}
+                                <div class="clients_link d-flex align-items-center gap-2 pb-3">
+                                    <div class="d-flex clinets_box">
+                                        <div class="clients_image">
+                                            <a href="{{ client.link }}"><img src="{{ client.image.url }}" alt="{{ client.name }}"></a>
+                                        </div>                                              
+                                    </div>
+
+                                    <div class="clients_meet">
+                                        <a href="{{ client.link }}">See more+</a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div class="clients_link d-flex align-items-center gap-2 mt-2">
+                                <div class="clients_image">
+                                    <a href=""><img src="{% static 'assets/Image/clients2.png' %}" alt=""></a>
+                                </div>
+                                <div class="clients_meet">
+                                    <p class="mb-0">Contect</p>
+                                    <a href="">(+91) 7309902183</a>
+                                </div>
+                            </div>
+                            <div class="decover_btn mt-4">
+                                <a href="">Discover more</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="slider_main owl-carousel owl-theme">
+                {% for image in slider_images %}
+                <div class="slider_image_body">
+                    <img src="{{ image.image.url }}" alt="{{ image.alt_text }}">
+                </div>
+                {% endfor %}                
+            </div>
+        </div>
+    </section>
+    <!-- Banner-Section-End -->
+
+    <!-- you’ve come to the right place-Section-Start -->
+    <section class="Right_place">
+        <div class="container-lg">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-6">
+                    <div class="right_place_text ">
+                        <h5>You’ve Come To The Right Place</h5>
+                        <p>Indian Leather Manufacturer created in 1989, is now among India’s leading producers of
+                            leather apparels and accessories for men, women and kids. Indian Leather Manufacturer is
+                            manned by 500+ committed employees across sections, backed by innovative in-house design and
+                            design facilities.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right_place_image">
+                        <img src="{% static 'assets/Image/right_place1.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <div class="right_place_image ">
+                        <img src="{% static 'assets/Image/right_place2.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1 mt-lg-0 mt-3">
+                    <div class="right_place_text">
+                        <p>
+                            and design facilities.Indian Leather Manufacturer is manned by 500+ committed employees
+                            across sections, backed by innovative in-house design
+                            and design facilities. The business has 3 advanced manufacturing components, housing very
+                            modern machines to keep up with the fast-paced and
+                            vibrant global leather industry. This evaluation is equal to a gold rating in LEED. This
+                            mill is the first of its type in the leather market.
+                            Currently, the business is providing its products to over 25 famous USA & European Brands
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- you’ve come to the right place-Section-End -->
+
+    <!-- Section Of Numbers Start -->
+    <section class="counter_number my-3 py-4">
+        <div class="container-lg">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-4">
+                    <div class="counter_bg">
+                        <h5 id="counter">200</h5>
+                        <p>State Of The Art Manufacturing Units​</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="counter_bg">
+                        <h5>150</h5>
+                        <p>Well-Known USA & European Brands​</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="counter_bg">
+                        <h5>300</h5>
+                        <p>State Of The Art Manufacturing Units​​</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section Of Numbers End -->
+
+    <!-- Disign Section Start -->
+    <section class="main_design py-5">
+        <div class="container-lg">
+            <div class="row align-items-center">
+                <div class="col-12">
+                    <div class="design_containt">
+                        <h5 class="mb-3">Design</h5>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="design_containt">
+                        <p class="mb-3">INDIAN LEATHER MANUFACTURER includes a dedicated design studio, wherein a group
+                            of designers creates new products, treatments, and techniques. Fusion of conventional
+                            techniques such as hand padding, hand sewing, knife-cutting, and dip-dyeing with
+                            contemporary methods such as laser cutting and embossing makes it prepare a flexible product
+                            range.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="design_image">
+                        <img src="{% static 'assets/Image/design1.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <div class="design_image">
+                        <img src="{% static 'assets/Image/right_place1.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-12 order-lg-2 order-1">
+                    <div class="design_containt mt-3">
+                        <p>Aside from its seasonal collections, the organization also works in close association with
+                            its customers to come up with customer-specific merchandise range. The provider’s in-house
+                            seasonal and customer-specific collections have been showcased in its own showrooms
+                            merchandise range.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Disign Section End -->
+
+    <!-- Why Choose Our Firm Section Start -->
+    <section class="firm_main_section py-5">
+        <div class="container-lg">
+            <div class="row justify-content-between align-items-center mb-4">
+                <div class="col-lg-4">
+                    <div class="firm_content">
+                        <h5>Why Choose Our Firm</h5>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="firm_contant_bg">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="firm_box">
+                        <img src="{% static 'assets/Image/setting.png' %}" alt="">
+                    </div>
+                    <div class="image_text_bg">
+                        <h5>Top quality leather</h5>
+                        <p>Wide range of selection of full-grain and top-grain cow, buffalo, sheep, and goat skin
+                            leather from top tannery around the world.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="firm_box">
+                        <img src="{% static 'assets/Image/setting2.png' %}" alt="">
+                    </div>
+                    <div class="image_text_bg">
+                        <h5>Huge product line</h5>
+                        <p>Wide range of selection of full-grain and top-grain cow, buffalo, sheep, and goat skin
+                            leather from top tannery around the world.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="firm_box">
+                        <img src="{% static 'assets/Image/setting3.png' %}" alt="">
+                    </div>
+                    <div class="image_text_bg">
+                        <h5>Skills & experience</h5>
+                        <p>Wide range of selection of full-grain and top-grain cow, buffalo, sheep, and goat skin
+                            leather from top tannery around the world.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="firm_box">
+                        <img src="{% static 'assets/Image/setting4.png' %}" alt="">
+                    </div>
+                    <div class="image_text_bg">
+                        <h5>Private label manufacturing</h5>
+                        <p>Wide range of selection of full-grain and top-grain cow, buffalo, sheep, and goat skin
+                            leather from top tannery around the world.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="firm_box">
+                        <img src="{% static 'assets/Image/setting5.png' %}" alt="">
+                    </div>
+                    <div class="image_text_bg">
+                        <h5>Rigorous quality control</h5>
+                        <p>Wide range of selection of full-grain and top-grain cow, buffalo, sheep, and goat skin
+                            leather from top tannery around the world.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="firm_box">
+                        <img src="{% static 'assets/Image/setting6.png' %}" alt="">
+                    </div>
+                    <div class="image_text_bg">
+                        <h5>Custom manufacturing</h5>
+                        <p>Wide range of selection of full-grain and top-grain cow, buffalo, sheep, and goat skin
+                            leather from top tannery around the world.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-end align-items-center mt-4">
+                <div class="col-lg-3 col-md-6 mb-md-0 mb-4">
+                    <div class="frim_image_bg">
+                        <img src="{% static 'assets/Image/frim1.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="frim_image_bg">
+                        <img src="{% static 'assets/Image/frim2.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 mt-lg-0 mt-4">
+                    <div class="frim_image_bg">
+                        <img src="{% static 'assets/Image/frim3.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-end align-items-center mt-4 ">
+                <div class="col-lg-6 col-md-12 mb-lg-0 mb-4">
+                    <div class="frim_image_bg">
+                        <img src="{% static 'assets/Image/frim4.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-md-0 mb-4">
+                    <div class="frim_image_bg">
+                        <img src="{% static 'assets/Image/frim5.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="frim_image_bg">
+                        <img src="{% static 'assets/Image/frim6.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Why Choose Our Firm Section End -->
+
+    <!-- What We Do Section Start -->
+    <section class="Bags_bg py-5">
+    <div class="container-lg">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-8 col-12">
+                <div class="bags_text">
+                    <h5>What We Do?</h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-10 col-md-12">
+                <div class="link_btn">
+                    <ul class="nav list_bg justify-content-center align-items-center gap-lg-4 gap-2" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active leather" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Leather Garments</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link leather" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Leather Bags</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link leather" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Leather Belts</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link leather" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false">Small Leather Goods</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="tab-content" id="myTabContent">
+                    {% for category, items in products.items %}
+                    <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" id="{{ category }}-tab-pane" role="tabpanel" aria-labelledby="{{ category }}-tab" tabindex="0">
+                        <div class="row justify-content-center align-items-center mt-4">
+                            {% for item in items %}
+                            <div class="col-lg-4 col-md-6">
+                                <div class="bags_image">
+                                    <img src="{{ item.image.url }}" alt="">
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- What We Do Section End -->
+
+    <!-- Sourcing Section Start -->
+    <section class="sourcing_main py-5">
+        <div class="container-lg">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-6">
+                    <div class="sourcing_content">
+                        <h5>Sourcing</h5>
+                        <p>By virtue of being within this trade for such a long time, the business’s forte is
+                            fabricating, in addition to sourcing. ILM functions using a thorough number of covers and
+                            skins.</p>
+                        <p>The business has its committed offices manned with a well-informed Quality Control staff in
+                            any way of the prime leather sourcing centers across India. This not only eases developing
+                            new leather attributes, but also assists the enterprise to maintain a strict excellent
+                            control on majority leather manufacturing.</p>
+                        <p>The metallic accessories, particularly, are sourced from China/Hong Kong. So far as zippers
+                            are involved, they’re constantly YKK or even customer-specific, whilst leather, liner and a
+                            broad selection of accessories used at the end goods are constantly REACH compliant.</p>
+                        <div class="sourcing_link d-flex align-items-center flex-wrap  gap-5 pt-4">
+                            <div class="enquiry_btn">
+                                <a href="">Enquiry Now</a>
+                            </div>
+                            <div class="request_btn">
+                                <a href="">Request for Quotation</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-lg-0 mt-5">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <div class="sourcing_image">
+                                <img src="{% static 'assets/Image/sourcing1.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 mt-md-0 mt-4">
+                            <div class="sourcing_image">
+                                <img src="{% static 'assets/Image/sourcing2.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <div class="sourcing_image">
+                                <img src="{% static 'assets/Image/frim3.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sourcing Section End -->
+
+    <!-- Compliance Section Start -->
+    <section class="compliance_main">
+        <div class="container-lg">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-8 col-12">
+                    <div class="compliance_text">
+                        <h5>Compliance</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-2 col-md-6 col-6 ">
+                    <div class="compliace_image">
+                        <img src="{% static 'assets/Image/complinces1.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <div class="compliace_image">
+                        <img src="{% static 'assets/Image/complinces2.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <div class="compliace_image">
+                        <img src="{% static 'assets/Image/complinces1.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <div class="compliace_image">
+                        <img src="{% static 'assets/Image/complinces3.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <!-- Compliance Section End -->
+
+    
+    <section class="contect_us">
+        <div class="container-lg">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-8 col-12">
+                    <div class="contect_text">
+                        <h5>Contact</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                </div>
+            </div>
+            <form action="" method="post" class="form_box" id="contact-form" novalidate>
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="input_field">
+                            {{ form.full_name.label_tag }}
+                            {{ form.full_name }}
+                            <small class="text-danger">{{ form.full_name.errors }}</small>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="input_field">
+                            {{ form.company.label_tag }}
+                            {{ form.company }}
+                            <small class="text-danger">{{ form.company.errors }}</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="input_field">
+                            {{ form.phone_number.label_tag }}
+                            {{ form.phone_number }}
+                            <small class="text-danger">{{ form.phone_number.errors }}</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="input_field">
+                            {{ form.email.label_tag }}
+                            {{ form.email }}
+                            <small class="text-danger">{{ form.email.errors }}</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="input_field">
+                            {{ form.website.label_tag }}
+                            {{ form.website }}
+                            <small class="text-danger">{{ form.website.errors }}</small>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="bg">
+                            <p>{{ form.product_interest.label_tag }}</p>
+                        </div>
+                    </div>
+                <div class="col-12">
+                    <div class="radio_bg">
+                        {% for radio in form.product_interest %}
+                            <div class="radio_group">
+                                {{ radio.tag }}
+                                {{ radio.choice_label }}
+                            </div>
+                        {% endfor %}
+                        <small class="text-danger">{{ form.product_interest.errors }}</small>
+                    </div>
+                </div>
+                    <div class="col-12 mt-3">
+                        <div class="text_write">
+                            {{ form.enquiry.label_tag }}<span>*</span>
+                            {{ form.enquiry }}
+                            <small class="text-danger">{{ form.enquiry.errors }}</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="smt_btn mt-4">
+                           
+                            <button type="submit" class="btn btn-primary" onclick="submitForm()">Submit</button>
+                            {% comment %} <button type="submit" class="btn btn-primary">Submit</button> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
+  
+    <!-- Modal-end -->
+  <!-- Add this script at the end of your HTML file, before the </body> tag -->
+
+    <script>
+    
+    // Function to show SweetAlert on form submission success or failure
+    function showAlert(message, alertType) {
+        swal({
+        title: message,
+        icon: alertType,
+        button: "OK",
+        });
+    }
+    </script>
+
+
+
+    <script>
+        // Function to handle form submission
+        function submitForm() {
+        document.getElementById('contactForm').submit();
+        }
+    
+        // Django form submission success or failure handling
+        {% if messages %}
+        {% for message in messages %}
+            showAlert("{{ message }}", "{{ message.tags }}");
+        {% endfor %}
+        {% endif %}
+    </script>
+<!-- Custom JavaScript for displaying messages with SweetAlert -->
+
+   
+    <!-- Contect Us Form Section End -->
+
+{% endblock content %}

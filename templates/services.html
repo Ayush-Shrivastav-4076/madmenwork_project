@@ -1,0 +1,548 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <!-- Banner-Section-Start -->
+    <section class="main_banner">
+        <div class="banner_body">
+            <div class="container-lg">
+                <div class="row justify-content-between align-items-center pb-lg-5 pb-4">
+                    <div class="col-lg-6">
+                        <div class="banner_text">
+                            {% for item in banners %}
+                                <h5>{{ item.title }}</h5>
+                                <p>{{ item.description }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="clients_details float-lg-end">
+                            <div class="text_bg">
+                                <p>Our Clients</p>
+                                {% for client in clients %}
+                                <div class="clients_link d-flex align-items-center gap-2 pb-3">
+                                    <div class="d-flex clinets_box">
+                                        <div class="clients_image">
+                                            <a href="{{ client.link }}"><img src="{{ client.image.url }}" alt="{{ client.name }}"></a>
+                                        </div>                                              
+                                    </div>
+
+                                    <div class="clients_meet">
+                                        <a href="{{ client.link }}">See more+</a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div class="clients_link d-flex align-items-center gap-2 mt-2">
+                                <div class="clients_image">
+                                    <a href=""><img src="{% static 'assets/Image/clients2.png' %}" alt=""></a>
+                                </div>
+                                <div class="clients_meet">
+                                    <p class="mb-0">Contect</p>
+                                    <a href="">(+91) 7309902183</a>
+                                </div>
+                            </div>
+                            <div class="decover_btn mt-4">
+                                <a href="">Discover more</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="about_image">
+                {% for item in banners %}
+                <img src="{{ item.image.url }}" alt="{{ item.title }}" class="w-100">
+                {% endfor %}
+                
+            </div>
+        </div>
+    </section>
+    <!-- Banner-Section-End -->
+
+    <!-- we always make the best-Section-Start -->
+    <section class="the_best">
+        <div class="container-lg">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-6 mb-lg-0 mb-2">
+                    <div class="the_best_text">
+                        <h5><label for="" class="color_text">Service</label> Beyond Expectations.</h5>
+                        <p>ILM, since inception, has continued to carve a niche for itself as an iconic leather goods
+                            company that manufactures leather goods for many prestigious brands around the world. For
+                            many international fashions and luxury brands, ILM refers to a company manufacturing the
+                            quality leather product.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="the_image">
+                        <img src="{% static 'assets/Image/thaServices.png' %}" alt="" class="w-100">
+                    </div>
+                </div>
+                <div class="col-lg-12 order-lg-1 order-2 mt-3">
+                    <div class="full_ser_image ">
+                        <img src="{% static 'assets/Image/fullServices.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-12 order-lg-2 order-">
+                    <div class="full_ser_text 1">
+                        <p>These brands face unique challenges so we provide solutions from Custom Leather
+                            Manufacturing that meet those challenges and at the same time we also contribute as Private
+                            Label Leather Manufacturer. As a leather products manufacturing company all these brands
+                            rely on us to make quality leather goods and leather garments.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- we always make the best-Section-End -->
+
+    <!-- Section Of our storyStart -->
+    <section class="our_story">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-12">
+                    <div class="story_contant">
+                        <h5>What’s Our <label for="" class="color_text">Features</label></h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been t when an unknown printer took a galley of .</p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="story_image">
+                        <img src="{% static 'assets/Image/futureimage.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="row justify-content-center">
+                        <div class="col-2">
+                            <div class="features_link">
+                                <img src="{% static 'assets/Image/setting.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="features_text">
+                                <h5>Lorem Ipsum is simply dummy text.</h5>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="row justify-content-center">
+                        <div class="col-2">
+                            <div class="features_link">
+                                <img src="{% static 'assets/Image/setting2.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="features_text">
+                                <h5>Lorem Ipsum is simply dummy text.</h5>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="row justify-content-center">
+                        <div class="col-2">
+                            <div class="features_link">
+                                <img src="{% static 'assets/Image/setting3.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="features_text">
+                                <h5>Lorem Ipsum is simply dummy text.</h5>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="row justify-content-center">
+                        <div class="col-2">
+                            <div class="features_link">
+                                <img src="{% static 'assets/Image/setting4.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="features_text">
+                                <h5>Lorem Ipsum is simply dummy text.</h5>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="row justify-content-center">
+                        <div class="col-2">
+                            <div class="features_link">
+                                <img src="{% static 'assets/Image/setting5.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="features_text">
+                                <h5>Lorem Ipsum is simply dummy text.</h5>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="row justify-content-center">
+                        <div class="col-2">
+                            <div class="features_link">
+                                <img src="{% static 'assets/Image/setting6.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="features_text">
+                                <h5>Lorem Ipsum is simply dummy text.</h5>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Section Of our story End -->
+
+    <!-- Happinese Section Start -->
+    <section class="the_best">
+        <div class="container-lg">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-6">
+                    <div class="the_image">
+                        <img src="{% static 'assets/Image/happinesGoal.png' %}" alt="" class="w-100">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="the_best_text">
+                        <h5>Your Happiness Is Our <label for="" class="color_text">Goal.</label></h5>
+                        <p>ILM is an international leather goods company that provides quality leather products and
+                            excellent customer service at competitive prices. We are a custom leather company that
+                            produces the finest leather products in a custom leather shop with experienced and trained
+                            craftsmen. At our custom leather shop, leather goods are custom-made to accommodate customer
+                            requests from around the world.ILM is a leather artisan studio offering a wide range of
+                            leather products as well as services such as Custom Leather Manufacturing, Private Label
+                            Leather Manufacturing, and Total Quality Control.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Happinese Section End -->
+
+    <!-- trusted Section Start -->
+    <section class="trusted_main">
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="trust_text">
+                        <h5>Trusted By 7493+ <label for="" class="color_text">Companies</label></h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been t when an unknown printer took a galley of </p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <div class="trust_image">
+                        <img src="{% static 'assets/Image/trustImage1.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <div class="trust_image">
+                        <img src="{% static 'assets/Image/trustImage2.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <div class="trust_image">
+                        <img src="{% static 'assets/Image/trustImage3.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- trusted Section End -->
+
+    <!-- Indian leather manufacturer services Start -->
+    <section class="manufacturer_sec">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-lg-12 mb-4">
+                    <div class="manufacturer_text">
+                        <h5><label for="" class="color_text">Indian Leather</label> Manufacturer Services</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="manufacturer_image_bg">
+                        <img src="{% static 'assets/Image/manufacturer1.png' %}" alt="">
+                    </div>
+                    <div class="text_manufacturer_bg">
+                        <p>Your Design | We Manufacture</p>
+                        <h5>Custom Leather Product Manufacturer</h5>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="manufacturer_image_bg">
+                        <img src="{% static 'assets/Image/manufacturer2.png' %}" alt="">
+                    </div>
+                    <div class="text_manufacturer_bg">
+                        <p>Your Design | We Manufacture</p>
+                        <h5>Private Leather Products Manufacturer</h5>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="manufacturer_image_bg">
+                        <img src="{% static 'assets/Image/manufacturer3.png' %}" alt="">
+                    </div>
+                    <div class="text_manufacturer_bg">
+                        <p>Your Design | We Manufacture</p>
+                        <h5>Leather Quality Management</h5>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- Indian leather manufacturer services End -->
+
+    <!-- Madmen Section start -->
+    <section class="madmen_main">
+        <div class="container">
+            <div class="row justify-content-center ">
+                <div class="col-lg-12">
+                    <div class="medman_text">
+                        <h5>What They Say about <label for="" class="color_text">Madmen Works</label></h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-lg-5 mt-3">
+                <div class="col-lg-8">
+                    <div class="slider_box owl-carousel owl-theme">
+                        <div class="bg_slid">
+                            <div class="slider_medman_body ">
+                                <div class="slide_text_bg">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s,when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                    </p>
+                                </div>
+                                <div class="slide_heading">
+                                    <h5>Loki Bright</h5>
+                                    <p>Chief Executive Officer</p>
+                                </div>
+                                <div class="slide_bottom_image d-flex justify-content-center gap-3">
+                                    <div class="image_bt">
+                                        <img src="{% static 'assets/Image/medmanSlide3.png' %}" alt="" class="w-100">
+                                    </div>
+                                    <div class="image_bt">
+                                        <img src="{% static 'assets/Image/medmanSlide2.png' %}" alt="" class="w-100">
+                                    </div>
+                                    <div class="image_bt">
+                                        <img src="{% static 'assets/Image/medmanSlide1.png' %}" alt="" class="w-100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg_slid">
+                            <div class="slider_medman_body ">
+                                <div class="slide_text_bg">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s,when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                    </p>
+                                </div>
+                                <div class="slide_heading">
+                                    <h5>Loki Bright</h5>
+                                    <p>Chief Executive Officer</p>
+                                </div>
+                                <div class="slide_bottom_image d-flex justify-content-center gap-3">
+                                    <div class="image_bt">
+                                        <img src="{% static 'assets/Image/medmanSlide3.png' %}" alt="" class="w-100">
+                                    </div>
+                                    <div class="image_bt">
+                                        <img src="{% static 'assets/Image/medmanSlide2.png' %}" alt="" class="w-100">
+                                    </div>
+                                    <div class="image_bt">
+                                        <img src="{% static 'assets/Image/medmanSlide1.png' %}" alt="" class="w-100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg_slid">
+                            <div class="slider_medman_body ">
+                                <div class="slide_text_bg">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s,when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                    </p>
+                                </div>
+                                <div class="slide_heading">
+                                    <h5>Loki Bright</h5>
+                                    <p>Chief Executive Officer</p>
+                                </div>
+                                <div class="slide_bottom_image d-flex justify-content-center gap-3">
+                                    <div class="image_bt">
+                                        <img src="{% static 'assets/Image/medmanSlide3.png' %}" alt="" class="w-100">
+                                    </div>
+                                    <div class="image_bt">
+                                        <img src="{% static 'assets/Image/medmanSlide2.png' %}" alt="" class="w-100">
+                                    </div>
+                                    <div class="image_bt">
+                                        <img src="{% static 'assets/Image/medmanSlide1.png' %}" alt="" class="w-100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Madmen section End -->
+
+    <!-- Contect Us Form Section Start -->
+    <section class="contect_us">
+        <div class="container-lg">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-8 col-12">
+                    <div class="story_contant">
+                        <h5><label for="" class="color_text">Contact</label> Our</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+            </div>
+            <form action="" class="form_box">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="input_field">
+                            <label for="">first name</label>
+                            <input type="text" name="" id="" placeholder="first name">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="input_field">
+                            <label for="">last name</label>
+                            <input type="text" name="" id="" placeholder="last name">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="input_field">
+                            <label for="">company</label>
+                            <input type="text" name="" id="" placeholder="company">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="input_field">
+                            <label for="">phone number</label>
+                            <input type="tel" name="" id="" placeholder="phone number">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="input_field">
+                            <label for="">your email</label>
+                            <input type="email" name="" id="" placeholder="email">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="input_field">
+                            <label for="">your website</label>
+                            <input type="text" name="" id="" placeholder="website">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="bg">
+                            <p>Which Product/ Service Are You Interested In*</p>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="radio_bg">
+                            <div class="radio_group">
+                                <input type="radio" name="seletor" id="bg" class="large_radio">
+                                <label for="bg">Leather Belt</label>
+                            </div>
+                            <div class="radio_group">
+                                <input type="radio" name="seletor" id="bg2" class="large_radio">
+                                <label for="bg2">Leather Bag</label>
+                            </div>
+                            <div class="radio_group">
+                                <input type="radio" name="seletor" id="bg3" class="large_radio">
+                                <label for="bg3">Leather Garment</label>
+                            </div>
+                            <div class="radio_group">
+                                <input type="radio" name="seletor" id="bg4" class="large_radio">
+                                <label for="bg4">Leather Hand Bags</label>
+                            </div>
+                            <div class="radio_group">
+                                <input type="radio" name="seletor" id="bg5" class="large_radio">
+                                <label for="bg5">Small Leather Goods.</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <div class="text_write">
+                            <label for="">enquiry*</label>
+                            <textarea name="" id=""
+                                placeholder="let us know in more detail how can we help you"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="smt_btn mt-4">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Contect Us Form Section End -->
+
+    <!-- Compliance Section Start -->
+    <section class="compliance_main">
+        <div class="container-lg">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-8 col-12">
+                    <div class="story_contant">
+                        <h5><label for="" class="color_text">Compliance</label></h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-2 col-6">
+                    <div class="compliace_image">
+                        <img src="{% static 'assets/Image/complinces1.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <div class="compliace_image">
+                        <img src="{% static 'assets/Image/complinces2.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <div class="compliace_image">
+                        <img src="{% static 'assets/Image/complinces1.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <div class="compliace_image">
+                        <img src="{% static 'assets/Image/complinces3.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <!-- Compliance Section End -->
+
+{% endblock content %}   
