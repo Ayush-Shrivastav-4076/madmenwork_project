@@ -37,7 +37,7 @@
                                     <a href=""><img src="{% static 'assets/Image/clients2.png' %}" alt=""></a>
                                 </div>
                                 <div class="clients_meet">
-                                    <p class="mb-0">Contect</p>
+                                    <p class="mb-0">Contact</p>
                                     <a href="">(+91) 7309902183</a>
                                 </div>
                             </div>
@@ -105,8 +105,7 @@
                 <div class="col-12">
                     <div class="story_contant">
                         <h5>What’s Our <label for="" class="color_text">Features</label></h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been t when an unknown printer took a galley of .</p>
+                        <p>Our features embody unparalleled craftsmanship and quality. From meticulously sourced materials to exquisite detailing, each product reflects timeless elegance and durability. We prioritize precision in design and functionality, ensuring every piece meets the highest standards of excellence. Experience luxury redefined with our distinctive leather creations.</p>
                     </div>
                 </div>
                 <div class="col-12">
@@ -123,8 +122,8 @@
                         </div>
                         <div class="col-10">
                             <div class="features_text">
-                                <h5>Lorem Ipsum is simply dummy text.</h5>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <h5>Meticulous Sourcing</h5>
+                                <p>We carefully select premium materials from renowned tanneries worldwide to ensure superior quality. </p>
                             </div>
                         </div>
                     </div>
@@ -138,8 +137,8 @@
                         </div>
                         <div class="col-10">
                             <div class="features_text">
-                                <h5>Lorem Ipsum is simply dummy text.</h5>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <h5>Exquisite Craftsmanship</h5>
+                                <p>Our artisans skillfully handcraft each piece with precision and attention to detail, resulting in impeccable finishes. </p>
                             </div>
                         </div>
                     </div>
@@ -153,8 +152,8 @@
                         </div>
                         <div class="col-10">
                             <div class="features_text">
-                                <h5>Lorem Ipsum is simply dummy text.</h5>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <h5>Timeless Design.</h5>
+                                <p>Our products feature timeless designs that seamlessly blend elegance with functionality, making them enduring classics. </p>
                             </div>
                         </div>
                     </div>
@@ -168,8 +167,8 @@
                         </div>
                         <div class="col-10">
                             <div class="features_text">
-                                <h5>Lorem Ipsum is simply dummy text.</h5>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <h5>Durability</h5>
+                                <p>Built to last, our leather goods are crafted with the finest materials and construction techniques, ensuring long-lasting quality.</p>
                             </div>
                         </div>
                     </div>
@@ -183,8 +182,8 @@
                         </div>
                         <div class="col-10">
                             <div class="features_text">
-                                <h5>Lorem Ipsum is simply dummy text.</h5>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <h5>Functionality</h5>
+                                <p> Designed with practicality in mind, our products offer thoughtful features and organizational elements for everyday use. </p>
                             </div>
                         </div>
                     </div>
@@ -198,8 +197,8 @@
                         </div>
                         <div class="col-10">
                             <div class="features_text">
-                                <h5>Lorem Ipsum is simply dummy text.</h5>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <h5>Attention to Detail</h5>
+                                <p>From intricate stitching to carefully chosen hardware, every aspect of our leather goods reflects our commitment to excellence. </p>
                             </div>
                         </div>
                     </div>
@@ -220,13 +219,7 @@
                 <div class="col-lg-6">
                     <div class="the_best_text">
                         <h5>Your Happiness Is Our <label for="" class="color_text">Goal.</label></h5>
-                        <p>ILM is an international leather goods company that provides quality leather products and
-                            excellent customer service at competitive prices. We are a custom leather company that
-                            produces the finest leather products in a custom leather shop with experienced and trained
-                            craftsmen. At our custom leather shop, leather goods are custom-made to accommodate customer
-                            requests from around the world.ILM is a leather artisan studio offering a wide range of
-                            leather products as well as services such as Custom Leather Manufacturing, Private Label
-                            Leather Manufacturing, and Total Quality Control.
+                        <p>At Madmenwork, we prioritize your satisfaction above all else. From our exceptional products to our dedicated customer service, we strive to exceed your expectations at every turn. Your happiness is our ultimate goal, and we're committed to delivering an unparalleled experience tailored to your needs.
                         </p>
                     </div>
                 </div>
@@ -418,84 +411,73 @@
                     </div>
                 </div>
             </div>
-            <form action="" class="form_box">
+            <form action="" method="post" class="form_box" id="contact-form" novalidate>
+                {% csrf_token %}
                 <div class="row">
                     <div class="col-lg-4 col-md-6 mb-3">
                         <div class="input_field">
-                            <label for="">first name</label>
-                            <input type="text" name="" id="" placeholder="first name">
+                            {{ form.full_name.label_tag }}
+                            {{ form.full_name }}
+                            <small class="text-danger">{{ form.full_name.errors }}</small>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="input_field">
+                            {{ form.company.label_tag }}
+                            {{ form.company }}
+                            <small class="text-danger">{{ form.company.errors }}</small>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-3">
                         <div class="input_field">
-                            <label for="">last name</label>
-                            <input type="text" name="" id="" placeholder="last name">
+                            {{ form.phone_number.label_tag }}
+                            {{ form.phone_number }}
+                            <small class="text-danger">{{ form.phone_number.errors }}</small>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-3">
                         <div class="input_field">
-                            <label for="">company</label>
-                            <input type="text" name="" id="" placeholder="company">
+                            {{ form.email.label_tag }}
+                            {{ form.email }}
+                            <small class="text-danger">{{ form.email.errors }}</small>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-3">
                         <div class="input_field">
-                            <label for="">phone number</label>
-                            <input type="tel" name="" id="" placeholder="phone number">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-3">
-                        <div class="input_field">
-                            <label for="">your email</label>
-                            <input type="email" name="" id="" placeholder="email">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-3">
-                        <div class="input_field">
-                            <label for="">your website</label>
-                            <input type="text" name="" id="" placeholder="website">
+                            {{ form.website.label_tag }}
+                            {{ form.website }}
+                            <small class="text-danger">{{ form.website.errors }}</small>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="bg">
-                            <p>Which Product/ Service Are You Interested In*</p>
+                            <p>{{ form.product_interest.label_tag }}</p>
                         </div>
                     </div>
-                    <div class="col-12">
-                        <div class="radio_bg">
+                <div class="col-12">
+                    <div class="radio_bg">
+                        {% for radio in form.product_interest %}
                             <div class="radio_group">
-                                <input type="radio" name="seletor" id="bg" class="large_radio">
-                                <label for="bg">Leather Belt</label>
+                                {{ radio.tag }}
+                                {{ radio.choice_label }}
                             </div>
-                            <div class="radio_group">
-                                <input type="radio" name="seletor" id="bg2" class="large_radio">
-                                <label for="bg2">Leather Bag</label>
-                            </div>
-                            <div class="radio_group">
-                                <input type="radio" name="seletor" id="bg3" class="large_radio">
-                                <label for="bg3">Leather Garment</label>
-                            </div>
-                            <div class="radio_group">
-                                <input type="radio" name="seletor" id="bg4" class="large_radio">
-                                <label for="bg4">Leather Hand Bags</label>
-                            </div>
-                            <div class="radio_group">
-                                <input type="radio" name="seletor" id="bg5" class="large_radio">
-                                <label for="bg5">Small Leather Goods.</label>
-                            </div>
-
-                        </div>
+                        {% endfor %}
+                        <small class="text-danger">{{ form.product_interest.errors }}</small>
                     </div>
+                </div>
                     <div class="col-12 mt-3">
                         <div class="text_write">
-                            <label for="">enquiry*</label>
-                            <textarea name="" id=""
-                                placeholder="let us know in more detail how can we help you"></textarea>
+                            {{ form.enquiry.label_tag }}<span>*</span>
+                            {{ form.enquiry }}
+                            <small class="text-danger">{{ form.enquiry.errors }}</small>
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="smt_btn mt-4">
-                            <button type="submit">Submit</button>
+                           
+                            <button type="submit" class="btn btn-primary" onclick="submitForm()">Submit</button>
+                            {% comment %} <button type="submit" class="btn btn-primary">Submit</button> {% endcomment %}
                         </div>
                     </div>
                 </div>
@@ -544,5 +526,32 @@
         </div>
     </section>
     <!-- Compliance Section End -->
+    <script>
+    
+        // Function to show SweetAlert on form submission success or failure
+        function showAlert(message, alertType) {
+            swal({
+            title: message,
+            icon: alertType,
+            button: "OK",
+            });
+        }
+        </script>
+    
+    
+    
+        <script>
+            // Function to handle form submission
+            function submitForm() {
+            document.getElementById('contactForm').submit();
+            }
+        
+            // Django form submission success or failure handling
+            {% if messages %}
+            {% for message in messages %}
+                showAlert("{{ message }}", "{{ message.tags }}");
+            {% endfor %}
+            {% endif %}
+        </script>
 
 {% endblock content %}   

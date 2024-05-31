@@ -67,9 +67,7 @@
                 <div class="col-lg-6 mb-lg-0 mb-4">
                     <div class="the_best_text">
                         <h5>We Always Make <label for="" class="color_text">The Best.</label></h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        <p>With a commitment to excellence, we consistently deliver top-quality leather goods. From belts to handbags, our products are crafted with precision and care, ensuring unparalleled durability and style. Experience the difference with our meticulous craftsmanship and attention to detail. We always make the best.
                         </p>
                     </div>
                     <div class="checking_text d-flex align-items-center gap-3">
@@ -77,7 +75,7 @@
                             <i class="fa-solid fa-check"></i>
                         </div>
                         <div class="sign_text">
-                            <p class="mb-0">Lorem Ipsum is simply dummy text.</p>
+                            <p class="mb-0">Exquisite Craftsmanship: Elevating Leather Goods to Perfection.</p>
                         </div>
                     </div>
                     <div class="checking_text d-flex align-items-center gap-3">
@@ -85,7 +83,7 @@
                             <i class="fa-solid fa-check"></i>
                         </div>
                         <div class="sign_text">
-                            <p class="mb-0">Lorem Ipsum is simply dummy text.</p>
+                            <p class="mb-0">Unmatched Quality: Setting Standards in Leather Craftsmanship.</p>
                         </div>
                     </div>
                     <div class="checking_text d-flex align-items-center gap-3">
@@ -93,7 +91,7 @@
                             <i class="fa-solid fa-check"></i>
                         </div>
                         <div class="sign_text">
-                            <p class="mb-0">Lorem Ipsum is simply dummy text.</p>
+                            <p class="mb-0">Timeless Elegance: Where Every Stitch Defines Excellence</p>
                         </div>
                     </div>
                     <div class="checking_text d-flex align-items-center gap-3">
@@ -101,11 +99,11 @@
                             <i class="fa-solid fa-check"></i>
                         </div>
                         <div class="sign_text">
-                            <p class="mb-0">Lorem Ipsum is simply dummy text.</p>
+                            <p class="mb-0">Distinctive Style: Redefining Luxury with Every Leather Creation.</p>
                         </div>
                     </div>
                     <div class="decover_btn mt-3">
-                        <a href="">Contact Us</a>
+                        <a href="{% url 'contact' %}">Contact Us</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -125,7 +123,7 @@
                 <div class="col-12">
                     <div class="story_contant">
                         <h5>Our <label for="" class="color_text">story</label></h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p>Our story is a journey of passion and perseverance. From humble beginnings, we've evolved into a symbol of quality and craftsmanship in the leather industry. Guided by our commitment to excellence, we continue to innovate and inspire, crafting timeless pieces that reflect our heritage and vision.</p>
                     </div>
                 </div>
                 <div class="col-12">
@@ -144,8 +142,8 @@
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-4">
                     <div class="heading">
-                        <h5><label for="" class="color_text">Lorem</label> Ipsum Dummy Text?</h5>
-                        <p>Lorem Ipsum is simply printing industry</p>
+                        <h5><label for="" class="color_text">Craftsmanship:</label> Elevating Leather Goods to Perfection</h5>
+                        <p>Our meticulous craftsmanship ensures every detail is perfect, reflecting our commitment to excellence in the leather industry.</p>
                     </div>
                 </div>
                 <div class="col-lg-2">
@@ -153,8 +151,8 @@
                         <img src="{% static 'assets/Image/setting.png' %}" alt="">
                     </div>
                     <div class="image_text_bg">
-                        <h5>Process</h5>
-                        <p>Lorem Ipsum is simply printing industry.</p>
+                        <h5>Quality Control</h5>
+                        <p>We adhere to rigorous quality standards at every stage of production to maintain consistency and excellence.</p>
                     </div>
                 </div>
                 <div class="col-lg-2">
@@ -162,8 +160,8 @@
                         <img src="{% static 'assets/Image/setting.png' %}" alt="">
                     </div>
                     <div class="image_text_bg">
-                        <h5>Process</h5>
-                        <p>Lorem Ipsum is simply printing industry.</p>
+                        <h5>Responsibility</h5>
+                        <p>As a responsible company, we prioritize ethical practices and social responsibility in all our endeavors.</p>
                     </div>
                 </div>
                 <div class="col-lg-2">
@@ -171,10 +169,11 @@
                         <img src="{% static 'assets/Image/setting.png' %}" alt="">
                     </div>
                     <div class="image_text_bg">
-                        <h5>Process</h5>
-                        <p>Lorem Ipsum is simply printing industry.</p>
+                        <h5>Innovation</h5>
+                        <p>We continually strive for innovation, exploring new techniques and technologies to enhance our products and services.</p>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -187,90 +186,20 @@
                 <div class="col-12">
                     <div class="story_contant">
                         <h5>Our <label for="" class="color_text">Team</label></h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p>Our team comprises skilled artisans and professionals dedicated to excellence. Together, we infuse passion and expertise into every aspect of our work, ensuring superior quality and customer satisfaction.</p>
                     </div>
                 </div>
+                {% for member in team_members %}
                 <div class=" col-lg-4 col-md-6">
                     <div class="about_pepole">
-                        <a href=""><img src="{% static 'assets/Image/about1.png' %}" alt=""></a>
+                        <a href=""><img src="{{ member.image.url }}" alt=""></a>
                     </div>
                     <div class="know_pepole pt-3">
-                        <h5><a href="">Harshit Singh</a></h5>
-                        <p><a href="">Founder</a></p>
+                        <h5><a href="">{{ member.name }}</a></h5>
+                        <p><a href="">{{ member.position }}</a></p>
                     </div>
                 </div>
-                <div class=" col-lg-4 col-md-6">
-                    <div class="about_pepole">
-                        <a href=""> <img src="{% static 'assets/Image/about2.png' %}" alt=""></a>
-                    </div>
-                    <div class="know_pepole pt-3">
-                        <h5><a href="">Rajan Aora</a></h5>
-                        <p><a href="">CEO</a></p>
-                    </div>
-                </div>
-                <div class=" col-lg-4 col-md-6">
-                    <div class="about_pepole">
-                        <a href=""><img src="{% static 'assets/Image/about3.png' %}" alt=""></a>
-                    </div>
-                    <div class="know_pepole pt-3">
-                        <h5><a href="">Suresh Verma</a></h5>
-                        <p><a href="">Manager Finance</a></p>
-                    </div>
-                </div>
-                <div class=" col-lg-4 col-md-6">
-                    <div class="about_pepole">
-                        <a href=""><img src="{% static 'assets/Image/about4.png' %}" alt=""></a>
-                    </div>
-                    <div class="know_pepole pt-3">
-                        <h5><a href="">Rajesh Talwar</a></h5>
-                        <p><a href="">General Manager</a></p>
-                    </div>
-                </div>
-                <div class=" col-lg-4 col-md-6">
-                    <div class="about_pepole">
-                        <a href=""> <img src="{% static 'assets/Image/about5.png' %}" alt=""></a>
-                    </div>
-                    <div class="know_pepole pt-3">
-                        <h5><a href="">Guru Charan Singh</a></h5>
-                        <p><a href="">General Manager</a></p>
-                    </div>
-                </div>
-                <div class=" col-lg-4 col-md-6">
-                    <div class="about_pepole">
-                        <a href=""><img src="{% static 'assets/Image/about6.png' %}" alt=""></a>
-                    </div>
-                    <div class="know_pepole pt-3">
-                        <h5><a href="">Harshit Singh</a></h5>
-                        <p><a href="">Founder</a></p>
-                    </div>
-                </div>
-                <div class=" col-lg-4 col-md-6">
-                    <div class="about_pepole">
-                        <a href=""><img src="{% static 'assets/Image/about7.png' %}" alt=""></a>
-                    </div>
-                    <div class="know_pepole pt-3">
-                        <h5><a href="">Harshit Singh</a></h5>
-                        <p><a href="">Founder</a></p>
-                    </div>
-                </div>
-                <div class=" col-lg-4 col-md-6">
-                    <div class="about_pepole">
-                        <a href=""><img src="{% static 'assets/Image/about8.png' %}" alt=""></a>
-                    </div>
-                    <div class="know_pepole pt-3">
-                        <h5><a href="">Harshit Singh</a></h5>
-                        <p><a href="">Founder</a></p>
-                    </div>
-                </div>
-                <div class=" col-lg-4 col-md-6">
-                    <div class="about_pepole">
-                        <a href=""> <img src="{% static 'assets/Image/about9.png' %}" alt=""></a>
-                    </div>
-                    <div class="know_pepole pt-3">
-                        <h5><a href="">Harshit Singh</a></h5>
-                        <p><a href="">Founder</a></p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -286,41 +215,15 @@
                     </div>
                 </div>
                 <div class="activity_body owl-carousel owl-theme">
+                    {% for activity in activities %}
                     <div class="slide_image">
-                        <img src="{% static 'assets/Image/activity1.png' %}" alt="">
+                        <img src="{{ activity.image.url }}" alt="{{ activity.description }}">
                         <div class="slide_date">
-                            <p><i class="fa-regular fa-calendar-days"></i>15-05-2024</p>
-                            <h5>Lorem Ipsum is simply dummy text of the printing </h5>
+                            <p><i class="fa-regular fa-calendar-days"></i>{{ activity.date }}</p>
+                            <h5>{{ activity.description }}</h5>
                         </div>
                     </div>
-                    <div class="slide_image">
-                        <img src="{% static 'assets/Image/activity2.png' %}" alt="">
-                        <div class="slide_date">
-                            <p><i class="fa-regular fa-calendar-days"></i>15-05-2024</p>
-                            <h5>Lorem Ipsum is simply dummy text of the printing </h5>
-                        </div>
-                    </div>
-                    <div class="slide_image">
-                        <img src="{% static 'assets/Image/activity3.png' %}" alt="">
-                        <div class="slide_date">
-                            <p><i class="fa-regular fa-calendar-days"></i>15-05-2024</p>
-                            <h5>Lorem Ipsum is simply dummy text of the printing </h5>
-                        </div>
-                    </div>
-                    <div class="slide_image">
-                        <img src="{% static 'assets/Image/activity1.png' %}" alt="">
-                        <div class="slide_date">
-                            <p><i class="fa-regular fa-calendar-days"></i>15-05-2024</p>
-                            <h5>Lorem Ipsum is simply dummy text of the printing </h5>
-                        </div>
-                    </div>
-                    <div class="slide_image">
-                        <img src="{% static 'assets/Image/activity3.png' %}" alt="">
-                        <div class="slide_date">
-                            <p><i class="fa-regular fa-calendar-days"></i>15-05-2024</p>
-                            <h5>Lorem Ipsum is simply dummy text of the printing </h5>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

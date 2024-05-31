@@ -71,16 +71,49 @@ class Contact(models.Model):
 
 
 class LeatherProduct(models.Model):
-    CATEGORY_CHOICES = [
-        ('garments', 'Leather Garments'),
-        ('bags', 'Leather Bags'),
-        ('belts', 'Leather Belts'),
-        ('small_goods', 'Small Leather Goods'),
-    ]
+
     
-    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES)
+    category = models.CharField(max_length=200, choices=PRODUCT_CHOICES)
     image = models.ImageField(upload_to='products/')
     description = models.TextField(blank=True, null=True)
     
     def __str__(self):
         return self.get_category_display()
+
+
+
+
+class Settings(models.Model):
+    phone = models.CharField(max_length=20, blank=True, null=True)
+    telephone = models.CharField(max_length=20, blank=True, null=True)
+    whatsapp_number = models.CharField(max_length=20, blank=True, null=True)
+    email_id = models.EmailField(max_length=254, blank=True, null=True)
+    address1 = models.CharField(max_length=255, blank=True, null=True)
+    address2 = models.CharField(max_length=255, blank=True, null=True)
+    fb_link = models.URLField(max_length=200, blank=True, null=True)
+    ig_link = models.URLField(max_length=200, blank=True, null=True)
+    linkedin = models.URLField(max_length=200, blank=True, null=True)
+    twitter = models.URLField(max_length=200, blank=True, null=True)
+    youtube = models.URLField(max_length=200, blank=True, null=True)
+    copyright = models.URLField(max_length=200, blank=True, null=True)
+
+    def __str__(self):
+        return f"Settings ({self.id})"
+
+
+class TeamMember(models.Model):
+    name = models.CharField(max_length=100)
+    position = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='team_images/')
+
+    def __str__(self):
+        return self.name
+
+
+class Activity(models.Model):
+    image = models.ImageField(upload_to='activities/')
+    date = models.DateField()
+    description = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.description[:50]
